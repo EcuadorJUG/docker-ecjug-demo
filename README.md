@@ -1,12 +1,15 @@
 # Docker ecjug demo
+Url del repositorio: [https://github.com/petrubear/docker-ecjug-demo](https://github.com/petrubear/docker-ecjug-demo)
 
-Los siguientes directorios tienen los archivos necesarios para ejecutar el laboratorio se parados en las siguientes carpetas:
+Los siguientes directorios tienen los archivos necesarios para ejecutar el laboratorio de inttroduccion a docker:
 
 * **ubuntu-jdk8** - dockerfile para generar una imagen de ubuntu 16.04 con oracle java8, vim y maven
 * **debian-jdk8** - dockerfile para generar una imagen de debian jessie con oracle java8, vim y maven
 * **debian-extended** - dockerfile para generar el ejemplo simple de java y maven
 * **debian-extended-web** - dockerfile para generar el ejemplo simple de tomcat
 * **debian-karaf** - dockerfile para generar una imagen con java 8 y karaf
+
+Como referencia, la documentación para crear una imagen Base se encuentra en: [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 
 # Descripción del Dockerfile
@@ -19,7 +22,7 @@ INSTRUCCION argumentos
 
 Las "instrucciones" más comunmente utilizadas son:
 
-* **FROM**, es la primera instruccion, indica la imagen original, ejemplo FROM ubuntu
+* **FROM**, es la primera instruccion del Dockerfile, indica la imagen inicial, ejemplo FROM ubuntu
 * **COPY**, permite copiar archivos del contexto de construccion al sistema de archivos del contenedor, ejemplo COPY pom.xml /code
 * **ENV**, permite configurar variables de entorno, ejemplo ENV JAVA_HOME=/opt/java/jdk9/
 * **RUN**, ejecuta un comando, ejemplo RUN apt-get update
